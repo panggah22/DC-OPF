@@ -35,7 +35,7 @@ $\mathcal{N},\mathcal{B}$, and $\mathcal{G}$ are the sets of buses, lines, and g
 I tested on case9 and case39 and verified that the results were identical to the power flow modules like `pandapower` and `pypower`.\
 Maybe, just maybe, the other cases work too. Or not.
 
-"When will you publish an AC OPF optimization including renewables, energy storages, electric vehicle charging stations, and a flame dragon?"
+"When will you publish an AC OPF optimization including renewables, energy storages, electric vehicle charging stations, and a flame dragon?"\
 -"A flame dragon will do."
 
 ***My brain was initially a potato. By learning more about things related to my research, it is now upgraded into a baked potato.***
