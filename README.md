@@ -1,1 +1,3 @@
-P
+\begin{align}
+  blablablabla
+\end{align}
