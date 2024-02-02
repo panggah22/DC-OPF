@@ -2,7 +2,8 @@
 
 When I started learning power flow analysis in my undergrad, I stumbled upon the limitation of my potato brain to understand the basics of the power flow. 
 Back then, there were no references to the optimization program of the economic dispatch or OPF specifically.
-So, to help you guys who want to learn the basics of optimization, I present you my ~~not-finest~~ creation that I made in my spare time, sometimes when I am asleep too.\
+So, to help you guys who want to learn the basics of optimization, I present you my ~~not-finest~~ creation that I made in my spare time, sometimes when I am asleep too.
+
 This program uses Python 3.8 with the modules as follows:\
 `pandas`, `matplotlib`, `math`, `networkx`, `pypower`, `gurobipy`
 
