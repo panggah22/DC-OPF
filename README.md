@@ -21,17 +21,17 @@ where $a,b,c$ are the cost coefficients, subject to:
 
 ```math
 \begin{align}
-p_i^{inj} &= \sum_{ik} p_{ik}^{line} - \sum_{ji} p_{ji}^{line}, &\forall i,j,k &\in \mathcal{N} \tag{1} \\
-p_i^{inj} &= p_i^{gen} - p_i^{load}, &\forall i &\in \mathcal{N} \tag{2} \\
-p_{ij}^{line} &= b_{ij}  (\theta_i - \theta_j), &\forall ij &\in \mathcal{B} \tag{3} \\
+p_i^{inj} &= \sum_{ik} p_{ik}^{line} - \sum_{ji} p_{ji}^{line}, &\forall i,j,k &\in \mathcal{N} \\
+p_i^{inj} &= p_i^{gen} - p_i^{load}, &\forall i &\in \mathcal{N} \\
+p_{ij}^{line} &= b_{ij}  (\theta_i - \theta_j), &\forall ij &\in \mathcal{B}\\
 \theta_i &= 0, &i &\in \mathcal{N}^0 \tag{4}\\
-\underline{p_i}^{gen} &\leq p_i^{gen} \leq \overline{p_i}^{gen}, &\forall i &\in \mathcal{G}  \tag{5} \\
--2\pi &\leq \theta_i \leq 2\pi, &\forall i &\in \mathcal{N} \tag{6} \\
-\underline{p_{ij}}^{line} &\leq p_{ij}^{line} \leq \overline{p_{ij}}^{line}, &\forall ij &\in \mathcal{B} \tag{7}
+\underline{p_i}^{gen} &\leq p_i^{gen} \leq \overline{p_i}^{gen}, &\forall i &\in \mathcal{G} \\
+-2\pi &\leq \theta_i \leq 2\pi, &\forall i &\in \mathcal{N} \\
+\underline{p_{ij}}^{line} &\leq p_{ij}^{line} \leq \overline{p_{ij}}^{line}, &\forall ij &\in \mathcal{B}
 \end{align}
 ```
 
-```math
+<!-- ```math
 \begin{align}
   I_{k_1,\dots,k_n}
   &= \int_{C_n} x_1^{k_1}\cdots x_n^{k_n}\\
@@ -42,7 +42,7 @@ p_{ij}^{line} &= b_{ij}  (\theta_i - \theta_j), &\forall ij &\in \mathcal{B} \ta
     I_{k_1,\dots,k_{i_0}-2,\dots,k_n} \times \frac{k_{i_0}-1}{k_{i_0}+1}&\text{if $k_{i_0} > 0$}
   \end{cases}
 \end{align}
-```
+``` -->
 
 $\mathcal{N},\mathcal{B}$, and $\mathcal{G}$ are the sets of buses, lines, and generators, respectively. The bounds in eq. $(5)$ -- $(7)$ are stated implicitly in the variable bounds, not the constraint form. Well, you know the rest :)\
 I tested on case9 and case39 and verified that the results were identical to the power flow modules like `pandapower` and `pypower`.\
