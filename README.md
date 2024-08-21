@@ -19,6 +19,7 @@ Similar to the economic dispatch problem, DC OPF aims to minimize the total gene
 $$ \min a_i \cdot (p_i^{gen})^2 + b_i \cdot p_i^{gen} + c_i $$
 
 where $a,b,c$ are the cost coefficients, subject to:<br>
+
 $$
 \begin{align}
   \tag{1.1}
