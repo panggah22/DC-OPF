@@ -25,9 +25,9 @@ where $a,b,c$ are the cost coefficients, subject to:
 	p^\text{inj}_i &= p^\text{g}_i - \widehat{p}^\text{load}_i, &&\forall i \in \mathcal{N} \label{eq:con_2}\\
 	p^\text{line}_{ij} &= \frac{1}{\widehat{X}_{ij}} (\theta_i - \theta_j), &&\forall ij \in \mathcal{L} \label{eq:con_3}\\
 	\theta_i &= 0, &&\forall i \in \mathcal{N}^\text{slack} \label{eq:con_4}\\
-  \underline{p}^\text{gen}_i &\leq p^\text{gen}_i \leq \overline{p}^\text{gen}_i \label{eq:bound_gen}\\
+  \underline{p}^\text{g}_i &\leq p^\text{g}_i \leq \overline{p}^\text{g}_i \label{eq:bound_gen}\\
 	-2\pi &\leq \theta_i \leq 2\pi \label{eq:bound_theta}\\
-	\underline{p}^\text{line}_{ij} &\leq p^\text{gen}_i \leq \overline{p}^\text{line}_{ij} \label{eq:bound_line}
+	\underline{p}^\text{line}_{ij} &\leq p^\text{line}_i \leq \overline{p}^\text{line}_{ij} \label{eq:bound_line}
 \end{align}
 ```
 
