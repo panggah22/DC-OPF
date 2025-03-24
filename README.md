@@ -21,15 +21,17 @@ where $a,b,c$ are the cost coefficients, subject to:
 
 ```math
 \begin{align}
-p_i^{inj} &= \sum_{ik} p_{ik}^{line} - \sum_{ji} p_{ji}^{line}, &\forall i,j,k &\in \mathcal{N} \\
-p_i^{inj} &= p_i^{gen} - p_i^{load}, &\forall i &\in \mathcal{N} \\
-p_{ij}^{line} &= b_{ij}  (\theta_i - \theta_j), &\forall ij &\in \mathcal{B}\\
-\theta_i &= 0, &i &\in \mathcal{N}^0 \\
-\underline{p_i}^{gen} &\leq p_i^{gen} \leq \overline{p_i}^{gen}, &\forall i &\in \mathcal{G} \\
--2\pi &\leq \theta_i \leq 2\pi, &\forall i &\in \mathcal{N} \\
-\underline{p_{ij}}^{line} &\leq p_{ij}^{line} \leq \overline{p_{ij}}^{line}, &\forall ij &\in \mathcal{B}
+  p^\text{inj}_i &= \sum_{h \in \mathcal{N}^+} p^\text{line}_{hi} - \sum_{j \in \mathcal{N}^-} p^\text{line}_{ij}, &&\forall i \in \mathcal{N} \label{eq:con_1}\\
+	p^\text{inj}_i &= p^\text{g}_i - \widehat{p}^\text{load}_i, &&\forall i \in \mathcal{N} \label{eq:con_2}\\
+	p^\text{line}_{ij} &= \frac{1}{\widehat{X}_{ij}} (\theta_i - \theta_j), &&\forall ij \in \mathcal{L} \label{eq:con_3}\\
+	\theta_i &= 0, &&\forall i \in \mathcal{N}^\text{slack} \label{eq:con_4}\\
+  \underline{p}^\text{gen}_i &\leq p^\text{gen}_i \leq \overline{p}^\text{gen}_i \label{eq:bound_gen}\\
+	-2\pi &\leq \theta_i \leq 2\pi \label{eq:bound_theta}\\
+	\underline{p}^\text{line}_{ij} &\leq p^\text{gen}_i \leq \overline{p}^\text{line}_{ij} \label{eq:bound_line}
 \end{align}
 ```
+
+For further explanation, please refer to the Documentation [here](Documentation.pdf)
 
 <!-- ```math
 \begin{align}
@@ -44,7 +46,7 @@ p_{ij}^{line} &= b_{ij}  (\theta_i - \theta_j), &\forall ij &\in \mathcal{B}\\
 \end{align}
 ``` -->
 
-$\mathcal{N},\mathcal{B}$, and $\mathcal{G}$ are the sets of buses, lines, and generators, respectively. The bounds in eq. $(5)$ -- $(7)$ are stated implicitly in the variable bounds, not the constraint form. Well, you know the rest :)\
+<!-- $\mathcal{N},\mathcal{B}$, and $\mathcal{G}$ are the sets of buses, lines, and generators, respectively. The bounds in eq. $(5)$ -- $(7)$ are stated implicitly in the variable bounds, not the constraint form. Well, you know the rest :)\ -->
 I tested on case9 and case39 and verified that the results were identical to the power flow modules like `pandapower` and `pypower`.\
 Maybe, just maybe, the other cases work too. Or not.
 
